@@ -1,3 +1,7 @@
+<img src="homeage.png" />
+<img src="itemPage.png" />
+<img src="shoppingCart.png" />
+
 # emberjs-tutorial
 
 This README outlines the details of collaborating on this Ember application.
