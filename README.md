@@ -1,4 +1,4 @@
-<img src="homeage.png" />
+<img src="homepage.png" />
 <img src="itemPage.png" />
 <img src="shoppingCart.png" />
 
