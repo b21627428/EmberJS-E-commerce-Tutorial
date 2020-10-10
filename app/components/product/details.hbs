@@ -1,0 +1,38 @@
+<div class="product-details">
+
+    {{!-- Header --}}
+    <section>
+        <h3>{{@name}}</h3>
+        {{!-- Çalışmıyor --}}
+        {{!-- {{#each this.starArray() as |index|}}
+        <i class="fa fa-star"></i>
+        {{/each}} --}}
+        <div class="text-warning">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+
+        </div>
+    </section>
+
+    {{!-- Price --}}
+    <section class={{unless @isDetails 'h4'}}>
+        <del class="small text-black-50">{{currency @price.original}}</del>
+        <i class="text-danger fonnt-weight-bold">{{currency @price.current}}</i>
+    </section>
+
+    {{!-- Colors --}}
+    {{#if @isDetails}}
+    <div>
+        <h5>Color</h5>
+        <div class={{concat "active-" @color}}>
+            {{#each @colors as |colorInfo|}}
+            <span class={{concat "product-color color-" colorInfo.color}}
+                {{on "click" (fn @changeColor colorInfo.color)}}></span>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+</div>
